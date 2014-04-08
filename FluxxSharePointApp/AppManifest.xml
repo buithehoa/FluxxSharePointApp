@@ -12,6 +12,9 @@
   </Properties>
 
   <AppPrincipal>
-    <RemoteWebApplication ClientId="*" />
+    <RemoteWebApplication ClientId="3170b654-8a78-43b8-b0ad-111371814d1b" />
   </AppPrincipal>
+  <AppPermissionRequests AllowAppOnlyPolicy="true">
+    <AppPermissionRequest Scope="https://fluxxtest.packard.org/" Right="FullControl" />
+  </AppPermissionRequests>
 </App>
