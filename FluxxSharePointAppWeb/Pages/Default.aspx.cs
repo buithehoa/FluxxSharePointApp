@@ -10,7 +10,9 @@ namespace FluxxSharePointAppWeb.Pages {
     protected void Page_Load(object sender, EventArgs e) {
       Uri hostWeb = new Uri("https://fluxxtest.packard.org/");
       string appOnlyAccessToken = TokenHelper.GetS2SAccessTokenWithWindowsIdentity(hostWeb, null);
-      Response.Write(appOnlyAccessToken);
+
+      Response.ContentType = "application/json";
+      Response.Write(string.Format("{{\"accessToken\": \"{0}\"}}", appOnlyAccessToken));
     }
   }
 }
